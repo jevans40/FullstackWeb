@@ -1,0 +1,15 @@
+<div class="container">
+    <h1>Demo 1</h1>
+    This demo takes some message as input and sends it to a lambda server to capitalize it.
+    <br/>
+    <br/>
+    <form class = 'add-form'>
+        <div class = 'form-Control'>
+            <label>Input text here</label>
+            <br/>
+            <input [(ngModel)]="message" name="message" placeholder="Input Text Here" />
+        </div>
+        <button (click)="onSubmit()" class="btn btn-primary">Submit</button>
+    </form>
+
+  </div>
