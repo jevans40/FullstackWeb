@@ -140,7 +140,7 @@ const hello: ValidatedEventAPIGatewayProxyEvent<typeof schema> = async (event) =
   const auth = await handler(token);
   let validUser = true
   let returnMessage : string
-  const testMessage = JSON.stringify(auth)
+
   if (auth.isValid) {
     validUser = true
     returnMessage = `${auth.userName}, says ${body.toUpperCase()}`
@@ -151,8 +151,8 @@ const hello: ValidatedEventAPIGatewayProxyEvent<typeof schema> = async (event) =
 
   return formatJSONResponse({
     message: returnMessage as string,
-    validUser: validUser as boolean,
-    event,
+    validUser: validUser as boolean
+   
   });
 }
 

@@ -1,0 +1,15 @@
+<body>
+    <app-search-bar></app-search-bar>
+    <div class="d-flex py-5 bg-light">
+        <div class="container-fluid">
+
+          <div class="row justify-content-md-center">  
+              <div class="col col-md-2" *ngFor="let number of arrayOne(8)">
+                  <app-artist-card></app-artist-card>
+              </div>
+              
+
+          </div>
+        </div>
+      </div>
+</body>

@@ -16,7 +16,7 @@ const InputForm = ({token}) => {
             return
         }
         console.log(`https://7fzhl7q379.execute-api.us-east-2.amazonaws.com/dev/hello/${text}/${accessToken}/`)
-        fetch(`https://7fzhl7q379.execute-api.us-east-2.amazonaws.com/dev/hello/${text}/${accessToken}/`, {mode: 'cors', method: 'GET'})
+        fetch(`https://7fzhl7q379.execute-api.us-east-2.amazonaws.com/dev/hello/${text}/${accessToken}/`, {method: 'GET'})
         .then(resp => resp.json())
         .then(data => {response = JSON.parse(data.body)})
         .then(() =>{
@@ -30,8 +30,8 @@ const InputForm = ({token}) => {
     }
 
     return (
-        <form className = 'add-form' onSubmit={onSubmit}>
-            <div className = 'form-Control'>
+        <form className='add-form' onSubmit={onSubmit}>
+            <div className='form-Control'>
                 <label>Input text here</label>
                 <br/>
                 <input type='text' 

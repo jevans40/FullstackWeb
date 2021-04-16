@@ -18,6 +18,9 @@ function App() {
       </div>
     )
   }
+
+  //The actual app starts here
+  //Return only if the user already has a token
   return (
     <div className="container">
       <h1>Demo 1</h1>
@@ -30,6 +33,8 @@ function App() {
   );
 }
 
+
+//Simply gets the token from the url, no authentication here
 const getToken = () => {
   var url = document.location.hash;
   var access_token = new URLSearchParams(url).get(`access_token`);
